@@ -1,4 +1,4 @@
-2
+3
 5
 aaba
 ba
@@ -9,3 +9,7 @@ baaba
 abc
 bcd
 cde
+3
+aba
+aba
+ba

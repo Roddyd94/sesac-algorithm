@@ -14,9 +14,9 @@ for T in range(TC):
 
     for i in range(num_of_words):
         for j in range(num_of_words):
-            if words[i] == words[j]:
+            if i == j:
                 continue
-
+            
             if words[i] + words[j] == (words[i] + words[j])[::-1]:
                 print(words[i] + words[j])
                 found = True
