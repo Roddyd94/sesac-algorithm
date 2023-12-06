@@ -4,13 +4,13 @@ answer = max(target - 54, 1)
 
 found = False
 
-while(answer < target):
+while answer < target:
     number = str(answer)
     temp = answer
 
     for c in number:
         temp += int(c)
-    
+
     if temp == target:
         print(answer)
         found = True
