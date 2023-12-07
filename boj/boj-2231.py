@@ -1,3 +1,7 @@
+import sys
+
+sys.stdin = open(f"input-{2231}.txt", "r")
+
 target = int(input())
 
 answer = max(target - 54, 1)
