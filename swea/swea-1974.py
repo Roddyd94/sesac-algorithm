@@ -6,10 +6,10 @@ sys.stdin = open(f"input-{1974}.txt", "r")
 
 def check_row(board: List[List[int]]):
     for i in range(9):
-        num_check = {}
+        num_check = set()
         for j in range(9):
             if board[i][j] not in num_check:
-                num_check[board[i][j]] = 1
+                num_check.add(board[i][j])
             else:
                 return False
 
@@ -18,10 +18,10 @@ def check_row(board: List[List[int]]):
 
 def check_col(board: List[List[int]]):
     for i in range(9):
-        num_check = {}
+        num_check = set()
         for j in range(9):
             if board[j][i] not in num_check:
-                num_check[board[j][i]] = 1
+                num_check.add(board[j][i])
             else:
                 return False
 
@@ -31,12 +31,12 @@ def check_col(board: List[List[int]]):
 def check_nine(board: List[List[int]]):
     for i in range(3):
         for j in range(3):
-            num_check = {}
+            num_check = set()
 
             for m in range(3):
                 for n in range(3):
                     if board[3 * i + m][3 * j + n] not in num_check:
-                        num_check[board[3 * i + m][3 * j + n]] = 1
+                        num_check.add(board[3 * i + m][3 * j + n])
                     else:
                         return False
 
